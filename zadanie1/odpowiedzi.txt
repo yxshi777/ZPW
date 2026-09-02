@@ -1,0 +1,8 @@
+repozytorium - główny folder lub projekt
+github - strona hostująca repozytoria
+git - narzędzie pozwalające nam dokonywać zmian w projektach grupowych, tak by cała grupa mogła edytować pliki
+commit - pojedyncze dodanie zmiany (jeśli bez push to lokalnie)
+branch - jakby gałąź odchodząca od głównego projektu, która potem zazwyczaj łączy się z nim
+checkout - polecenie pozwalające przejść do konkretnego brancha
+merge - łączy branche z powrotem do jednego brancha np. do mastera
+rebase - podobne do merge, ale zamiast łączyć w całość jednym kolejnym commitem, przenosi commity na wierzch innego brancha
