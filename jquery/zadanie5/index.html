@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        $(function(){
+            let count = 0;
+            $("#kwadrat").click(function(){
+                count++;
+                $("#komunikat").text("Kliknięto " + count + " razy");
+            });
+        });
+    </script>
+
+    <style>
+        #kwadrat{
+            background-color: red;
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="kwadrat"></div>
+    <p id="komunikat">Kliknięto 0 razy</p>
+</body>
+</html>
