@@ -9,18 +9,25 @@
         $(function(){
             $("#formularz").submit(function(event){
                 event.preventDefault()
-                if($("#nick").val() === ""){
-                    $("#info").text("Podaj nick")
+                if($("#email").val() === "" || $("#pwd").val() === ""){
+                    $("#info").text("Podaj dane")
                 }else{
-                    $("#info").text("Przesałano nick: " + $("#nick").val())
+                    if($("#pwd").val().lenth() >= 6){
+                        $("#info").text("Przesłano pomyślnie")
+                    }else{
+                        $("#info").text("Hasło jest za krótkie")
+                        $("#info").css("background")
+                    }
                 }
+                    
             })
         })
     </script>
 </head>
 <body>
     <form id="formularz">
-        <input type="text" id="nick">
+        <input type="text" id="email" placeholder="E-mail">
+        <input type="password" id="pwd" placeholder="Hasło">
         <button type="submit">Wyślij</button>
     </form>
     <p id="info"></p>
