@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            let wybranaOdp = $("input[name='theme']:checked").val()
+            $("#przeslij").click(function(){
+                if(wybranaOdp == "parabola"){
+                    $("").css("background-color", "green")
+                    $("#odpowiedz").slideDown()
+                }else{
+                    $("odpA").css("background-color", "red")
+                    $("odpB").css("background-color", "green")
+                    $("odpC").css("background-color", "red")
+                    $("#odpowiedz").slideDown()
+                }
+            });
+        })
+    </script>
+</head>
+<body>
+    <h2>Pyatnie 1:</h2>
+    <p>Wykresem funkcji kwadratowej jest?</p>
+    <div id="opcjeWyboru">
+
+        <label for="a" id="odpA">A. Prosta</label>
+        <input type="radio" id="a" value="prosta">
+
+        <label for="b" id="odpB">B. Parabola</label>
+        <input type="radio" id="b" value="parabola">
+
+        <label for="c" id="odpC">C. Hiperbola</label>
+        <input type="radio" id="c" value="hiperbola">
+
+    </div>
+    <button id="przeslij" type="submit">Prześlij Odpowiedź</button>
+    <div id="odpowiedz"></div>
+        <p>Odpowiedź: Parabola.</p>
+        <img src="parabola">
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            $("#hide").click(function(){
+                $("p").hide()
+            });
+            $("#show").click(function(){
+                $("p").show()
+            });
+            $("#toggle").click(function(){
+                $("p").toggle()
+            });
+            $("#slideup").click(function(){
+                $("p").slideUp()
+            });
+            $("#slidedown").click(function(){
+                $("p").slideDown()
+            });
+            $("#slidetoggle").click(function(){
+                $("p").slideToggle()
+            });
+        })
+    </script>
+</head>
+<body>
+    <p>paragraph</p>
+    <button id="hide" type="submit">hide it</button>
+    <button id="show" type="submit">show it</button>
+    <button id="toggle" type="submit">toggle it</button>
+    <button id="slideup" type="submit">slide it up</button>
+    <button id="slidedown" type="submit">slide it down</button>
+    <button id="slidetoggle" type="submit">slide toggle it</button>
+    
+</body>
+</html>
