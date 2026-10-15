@@ -4,8 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            $("#formularz").submit(function(event){
+                event.preventDefault()
+                if($("#nick").val() === ""){
+                    $("#info").text("Podaj nick")
+                }else{
+                    $("#info").text("Przesałano nick: " + $("#nick").val())
+                }
+            })
+        })
+    </script>
 </head>
 <body>
+    <form id="formularz">
+        <input type="text" id="nick">
+        <button type="submit">Wyślij</button>
+    </form>
+    <p id="info"></p>
     
 </body>
 </html>
